@@ -14,6 +14,10 @@ app.get('/api/user/:username', handler.getUser);
 
 app.get('/api/user/:username/goals', handler.getUserGoals);
 
+app.get('/api/payment', handler.getPaymentToken);
+
+app.post('/api/payment', handler.makePayment);
+
 var port = process.env.PORT || 3000;
 app.listen(port, function(){
   console.log('app listening on port', port);
