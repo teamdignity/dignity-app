@@ -1,1 +1,24 @@
-<h2>My name is: {{data.username}}</h2>
+<img class="hero" src="{{data.profile_picture_url}}">
+
+<div class="row">
+  <div class="col-12">
+    <h3>{{data.name.split(" ")[0]}}</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <h4>{{data.goals[0].name}}</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="progress">
+      <div class="progress-bar" style="width: {{(data.goals[0].amount_raised / data.goals[0].cost) * 100}}%;"></div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="description">{{data.goals[0].description}}</div>
+  </div>
+</div>

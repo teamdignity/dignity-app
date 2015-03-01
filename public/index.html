@@ -5,12 +5,41 @@
     <!-- CSS -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body ng-app="dignityApp">
-    <h1>Dignity App</h1>
+    <div class="container">
+      <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="#">Dignity Unlimited</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">About</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Donate</a></li>
+            <li><a href="#">Our supporters</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" action="#" role="search">
+            <div class="form-group">
+              <div class="input-group">
+                <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+                <span class="input-group-btn">
+                  <button type="submit" class="btn"><span class="fui-search"></span></button>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </nav>
 
-    <div ui-view></div>
-
+      <div ui-view></div>
+    </div>
     <!-- JS -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
