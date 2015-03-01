@@ -49,8 +49,6 @@ form.navbar-form {
   border-color: white !important;
 }
 
-
-
 .user-profile-content {
   padding-left: 18px;
   padding-right: 18px;
@@ -89,4 +87,5 @@ form.navbar-form {
   text-align: center;
   background-color: white;
   color: #c72e2d;
+  max-width: 160px;
 }
