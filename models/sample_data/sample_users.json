@@ -2,6 +2,7 @@
   {
     "type": "recipient",
     "name": "Mariko Henderson",
+    "profile_picture_url": "/mock/images/mariko.png",
     "email_address": "magna.Sed@volutpatNulla.com",
     "username": "superwoman123",
     "biography": "Lorem ipsum dolor sit amet"
