@@ -12,6 +12,7 @@ app.get('/', function(req, res){
 
 app.get('/api/user/:username', handler.getUser);
 
+app.get('/api/user/:username/goals', handler.getUserGoals);
 
 var port = process.env.PORT || 3000;
 app.listen(port, function(){
