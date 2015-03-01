@@ -1,0 +1,22 @@
+.container {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.user-profile-content {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.profile-picture {
+  width: 100%;
+}
+
+.goal-progress {
+  align: right;
+}

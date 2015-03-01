@@ -1,24 +1,19 @@
-<img class="hero" src="{{data.profile_picture_url}}">
-
 <div class="row">
-  <div class="col-12">
+  <div class="col-xs-12">
+    <img class="profile-picture" ng-src="{{data.profile_picture_url}}" />
+  </div>
+</div>
+<div class="row user-profile-content">
+  <div class="col-xs-12">
     <h3>{{data.name.split(" ")[0]}}</h3>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12">
-    <h4>{{data.goals[0].name}}</h4>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12">
+
+    <h4 class="goal-name">{{data.goals[0].name}}</h4>
+
     <div class="progress">
       <div class="progress-bar" style="width: {{(data.goals[0].amount_raised / data.goals[0].cost) * 100}}%;"></div>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12">
+    <em class="goal-progress">{{data.goals[0].amount_raised | currency}} of {{data.goals[0].cost | currency}} raised</em>
+
     <div class="description">{{data.goals[0].description}}</div>
   </div>
 </div>
