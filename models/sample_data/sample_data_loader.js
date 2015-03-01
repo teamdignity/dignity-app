@@ -1,13 +1,17 @@
-// Users
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/dignity-app');
+
 var sampleUserData = require('./sample_users.json');
 var User = require('../User');
-// Goals
-var sampleGoalData = require('./sample_goals.json');
-var Goal = require('../Goal');
+sampleUserData[0].goals = require('./sample_goals.json');
 
-var goals = [];
-Goal.create(sampleGoalData[0]).then(function (g) {
-  User.create(sampleUserData[0]).then(function (u) {
-    g.setUser(u);
-  });
+var db = mongoose.connection;
+db.on('error', function(){
+  console.error('error connecting to mongo');
 });
+db.once('open', function(){
+  console.log('opened connection to db successfully');
+  var user = new User(sampleUserData[0]);
+  user.save();
+});
+console.log('synchronous stuff finished');

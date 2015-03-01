@@ -2,8 +2,21 @@
 <html>
   <head>
     <title>Dignity</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css">
   </head>
-  <body>
+  <body ng-app="dignityApp">
     <h1>Dignity App</h1>
+
+    <div ui-view></div>
+
+    <!-- JS -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="app/users/users.module.js"></script>
+    <script src="app/users/users.controller.js"></script>
+    <script src="app/users/users.dataservice.js"></script>
   </body>
 </html>
