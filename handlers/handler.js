@@ -49,3 +49,7 @@ function getPaymentToken(req, res){
     res.send(response.clientToken);
   });
 }
+
+function makePayment(req, res){
+
+}
