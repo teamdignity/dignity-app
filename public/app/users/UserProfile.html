@@ -12,7 +12,7 @@
     <div class="progress">
       <div class="progress-bar" style="width: {{(data.goals[0].amount_raised / data.goals[0].cost) * 100}}%;"></div>
     </div>
-    <em class="goal-progress">{{data.goals[0].amount_raised | currency}} of {{data.goals[0].cost | currency}} raised</em>
+    <div class="goal-progress">{{data.goals[0].amount_raised | currency}} of {{data.goals[0].cost | currency}} raised</div>
 
     <div class="description">{{data.goals[0].description}}</div>
   </div>

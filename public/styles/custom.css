@@ -1,3 +1,14 @@
+/* background red is #c72e2d */
+/* menu red is #e73430 */
+/* logo font malayam MN reg */
+/* rest of fonts Avenir */
+
+body {
+  background-color: #c72e2d;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
 .container {
   padding-right: 0px;
   padding-left: 0px;
@@ -6,11 +17,22 @@
 .navbar {
   border-radius: 0px;
   margin-bottom: 0px;
+  background-color: #e73430;
+  min-height: 56px;
+  font-family: 'Vollkorn', serif;
+}
+
+a.navbar-brand {
+  padding-top: 12px;
+  font-size: 40px;
 }
 
 .user-profile-content {
   padding-left: 18px;
   padding-right: 18px;
+  background-color: white;
+  min-height: 100vh;
+  color: #c72e2d;
 }
 
 .profile-picture {
@@ -18,5 +40,16 @@
 }
 
 .goal-progress {
-  align: right;
+  text-align: right;
+  font-style: italic;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.progress {
+  margin-bottom: 4px;
+}
+
+.progress-bar {
+  background-color: #c72e2d;
 }
