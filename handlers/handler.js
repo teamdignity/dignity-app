@@ -7,7 +7,9 @@ module.exports = {
 };
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/dignity-app');
+var mongoUri = (process.env.NODE_ENV === 'production') ?
+    process.env.MONGOLAB_URI : 'mongodb://localhost/dignity-app';
+mongoose.connect(mongoUri);
 
 var db = mongoose.connection;
 db.on('error', function(){
