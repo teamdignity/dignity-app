@@ -7,5 +7,5 @@ Developed for BattleHack LA
 * Shelter
 * Homeless Person
 * Donor
-* Shelter Staff
+* Volunteer (i.e. shelter staff, food bank staff, social worker etc.)
 * Goal
