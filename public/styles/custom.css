@@ -1,12 +1,25 @@
 /* background red is #c72e2d */
+/* fixed background color is #D70014 */
 /* menu red is #e73430 */
 /* logo font malayam MN reg */
 /* rest of fonts Avenir */
 
 body {
-  background-color: #c72e2d;
+  background-color: #D70014;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+}
+
+a {
+  color: white;
+}
+
+button.navbar-toggle {
+  color: white;
+}
+
+.navbar-toggle:hover:before, .navbar-toggle:focus:before, .navbar-toggle:before {
+  color: white;
 }
 
 .container {
@@ -20,12 +33,23 @@ body {
   background-color: #e73430;
   min-height: 56px;
   font-family: 'Vollkorn', serif;
+  color: white;
 }
 
 a.navbar-brand {
-  padding-top: 12px;
+  padding-top: 11px;
   font-size: 40px;
 }
+
+.navbar-collapse {
+  border-color: white;
+}
+
+form.navbar-form {
+  border-color: white !important;
+}
+
+
 
 .user-profile-content {
   padding-left: 18px;
@@ -52,4 +76,17 @@ a.navbar-brand {
 
 .progress-bar {
   background-color: #c72e2d;
+}
+
+.static-panel {
+  width: 100%;
+}
+
+.donate-btn {
+  align: center;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  color: #c72e2d;
 }

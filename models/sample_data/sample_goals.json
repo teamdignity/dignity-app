@@ -1,9 +1,9 @@
 [
   {
-    "cost": 80,
-    "amount_raised": 45,
-    "name": "New Boots",
-    "description": "I walk a lot, and my current shoes are falling apart. A new pair during winter is something I really need.",
+    "cost": 20,
+    "amount_raised": 15,
+    "name": "Canned Fruit",
+    "description": "I have to have a non-perishable portable item to help feed me and my children",
     "priority": 0
   }
 ]
