@@ -17,6 +17,4 @@ var Goal = sequelize.define('Goal', {
 
 Goal.belongsTo(User);
 
-Goal.sync();
-
 module.exports = Goal;
