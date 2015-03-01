@@ -42,7 +42,7 @@
     </form>
     <form id="checkout" ng-show="showForm" method="post" action="/api/payment">
       <div id="dropin"></div>
-      <input type="submit" class=" btn btn-primary col-xs-12" value="Donate {{amountToBeDonated | currency}}">
+      <div ng-click="makeDonation()" class="btn btn-primary col-xs-12">Donate {{amountToBeDonated | currency}}</div>
     </form>
     </div>
   </div>

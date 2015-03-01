@@ -5,11 +5,11 @@
     .module('users')
     .controller('usersController', usersController);
 
-  usersController.$inject = ['$scope', '$http', '$sce', 'usersDataservice'];
+  usersController.$inject = ['$scope', '$state', '$http', '$sce', 'usersDataservice'];
 
   //////////////////////////
 
-  function usersController($scope, $http, $sce, usersDataservice){
+  function usersController($scope, $state, $http, $sce, usersDataservice){
 
     usersDataservice.getUser().then(function(data, status, headers, config){
       $scope.data = data.data;
@@ -17,6 +17,12 @@
       $scope.amountToBeDonated = 5;
       $scope.showAmount = true;
       $scope.showForm = false;
+      $scope.makeDonation = function () {
+        $http.post('/api/payment').then(function(){
+          $state.go('user_donate_success', $scope);
+        });
+      };
+      console.log(data.data);
     });
 
     $http.get('/api/payment').then(function(data, status, headers, config){

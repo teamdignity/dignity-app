@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img class="profile-picture" ng-src="{{data.profile_picture_url}}" />
+  </div>
+</div>
+<div class="row user-profile-content">
+  <div class="col-xs-12">
+    <h3>Mariko</h3>
+
+    <h4 class="goal-name">Needs: Canned Fruit</h4>
+
+    <div class="progress">
+      <div class="progress-bar" style="width: {{18 / 20 * 100}}%;"></div>
+    </div>
+    <div class="goal-progress">{{18 | currency}} of {{20 | currency}} raised</div>
+    <h3><span class="fui-check-circle"></span> Success!</h3>
+
+    <p>Thanks to you, Mariko is now $3.00 closer to her goal. Want to find out when she hits it?</p>
+    <div class="col-xs-12">
+      <div class="form-group">
+        <input type="email" value="" placeholder="name@example.com" class="form-control">
+        <input type="submit" class="btn btn-primary col-xs-12" value="Sign up for updates">
+      </div>
+    </div>
+  </div>
+</div>

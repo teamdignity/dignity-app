@@ -24,6 +24,11 @@
         templateUrl: 'app/users/UserProfile.html',
         controller: 'usersController',
         controllerAs: 'usersCtrl'
+      })
+      .state('user_donate_success',{
+        templateUrl: 'app/donation/success.html',
+        controller: 'usersController',
+        controllerAs: 'usersCtrl'
       });
   });
 
