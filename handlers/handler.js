@@ -40,10 +40,10 @@ function getUserGoals(req, res){
 
 function getPaymentToken(req, res){
   var gateway = braintree.connect({
-    environment: braintree.Environment.Sandbox,
-    merchantId: "99xxs69cm47hdfqw",
-    publicKey: "cty7h2qc9qbdd8q8",
-    privateKey: "3c9a666465176a07ed6df99821d93065"
+    environment:  braintree.Environment.Sandbox,
+    merchantId:   '99xxs69cm47hdfqw',
+    publicKey:    'cty7h2qc9qbdd8q8',
+    privateKey:   '3c9a666465176a07ed6df99821d93065'
   });
   gateway.clientToken.generate({}, function (err, response) {
     res.send(response.clientToken);
@@ -51,5 +51,5 @@ function getPaymentToken(req, res){
 }
 
 function makePayment(req, res){
-
+  res.redirect('/#/user/superwoman123/donate/success');
 }

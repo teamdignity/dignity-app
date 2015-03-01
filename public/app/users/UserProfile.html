@@ -40,7 +40,7 @@
       </div>
       <div class="btn btn-primary col-xs-12" ng-click="showForm = true; showAmount = false">Donate {{amountToBeDonated | currency}} to {{data.name.split(" ")[0]}}</div>
     </form>
-    <form id="checkout" ng-show="showForm" method="post" action="/checkout">
+    <form id="checkout" ng-show="showForm" method="post" action="/api/payment">
       <div id="dropin"></div>
       <input type="submit" class=" btn btn-primary col-xs-12" value="Donate {{amountToBeDonated | currency}}">
     </form>
