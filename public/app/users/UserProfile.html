@@ -7,7 +7,7 @@
   <div class="col-xs-12">
     <h3>{{data.name.split(" ")[0]}}</h3>
 
-    <h4 class="goal-name">{{data.goals[0].name}}</h4>
+    <h4 class="goal-name">Needs: {{data.goals[0].name}}</h4>
 
     <div class="progress">
       <div class="progress-bar" style="width: {{(data.goals[0].amount_raised / data.goals[0].cost) * 100}}%;"></div>
@@ -15,5 +15,35 @@
     <em class="goal-progress">{{data.goals[0].amount_raised | currency}} of {{data.goals[0].cost | currency}} raised</em>
 
     <div class="description">{{data.goals[0].description}}</div>
+    <h4 class="donate">Donate</h4>
+    <form name="amount" ng-show="showAmount">
+      <label class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios1" ng-click="amountToBeDonated = 3; showOther = false;" data-toggle="radio" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+        $3
+      </label>
+      <label class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios2" ng-click="amountToBeDonated = 5; showOther = false;" checked="" data-toggle="radio" checked="" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+        $5
+      </label>
+      <label class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios3" ng-click="amountToBeDonated = 10; showOther = false;" data-toggle="radio" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+        $10
+      </label>
+      <label class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios4" ng-click="showOther = true" data-toggle="radio" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+        Other
+      </label>
+      <div class="col-xs-4">
+        <div class="form-group">
+          <input type="number" ng-show="showOther" ng-model="amountToBeDonated" placeholder="$15" class="form-control">
+        </div>
+      </div>
+      <div class="btn btn-primary col-xs-12" ng-click="showForm = true; showAmount = false">Donate {{amountToBeDonated | currency}} to {{data.name.split(" ")[0]}}</div>
+    </form>
+    <form id="checkout" ng-show="showForm" method="post" action="/checkout">
+      <div id="dropin"></div>
+      <input type="submit" class=" btn btn-primary col-xs-12" value="Donate {{amountToBeDonated | currency}}">
+    </form>
+    </div>
   </div>
 </div>
