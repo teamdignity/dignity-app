@@ -9,6 +9,10 @@ var User = sequelize.define('User', {
   username: Sequelize.STRING,
   biography: Sequelize.TEXT,
   total_times_donated: Sequelize.INTEGER
+}, {
+  freezeTableName: true
 });
+
+User.sync();
 
 module.exports = User;

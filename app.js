@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
-var handler = require('handlers/handler');
+var handler = require('./handlers/handler');
 
 app.use(express.static(path.join(__dirname, './public/')));
 
