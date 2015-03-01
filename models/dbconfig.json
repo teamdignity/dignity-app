@@ -1,0 +1,22 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "dignity",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "define": {
+      "charset": "utf8"
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "dignity",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "define": {
+      "charset": "utf8"
+    }
+  }
+}
