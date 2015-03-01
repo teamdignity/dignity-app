@@ -1,9 +1,12 @@
 var User = require('../models/User');
 var Goal = require('../models/Goal');
+var braintree = require('braintree');
 
 module.exports = {
   getUser: getUser,
-  getUserGoals: getUserGoals
+  getUserGoals: getUserGoals,
+  getPaymentToken: getPaymentToken,
+  makePayment: makePayment
 };
 
 var mongoose = require('mongoose');
@@ -34,3 +37,15 @@ function getUserGoals(req, res){
     res.send(JSON.stringify(user.goals));
   });
 };
+
+function getPaymentToken(req, res){
+  var gateway = braintree.connect({
+    environment: braintree.Environment.Sandbox,
+    merchantId: "99xxs69cm47hdfqw",
+    publicKey: "cty7h2qc9qbdd8q8",
+    privateKey: "3c9a666465176a07ed6df99821d93065"
+  });
+  gateway.clientToken.generate({}, function (err, response) {
+    res.send(response.clientToken);
+  });
+}

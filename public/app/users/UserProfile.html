@@ -16,7 +16,7 @@
 
     <div class="description">{{data.goals[0].description}}</div>
     <h4 class="donate">Donate</h4>
-    <form name="amount">
+    <form name="amount" ng-show="showAmount">
       <label class="radio">
         <input type="radio" name="optionsRadios" id="optionsRadios1" ng-click="amountToBeDonated = 3; showOther = false;" data-toggle="radio" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
         $3
@@ -35,10 +35,14 @@
       </label>
       <div class="col-xs-4">
         <div class="form-group">
-          <input type="text" ng-show="showOther" ng-model="amountToBeDonated" placeholder="$15" class="form-control">
+          <input type="number" ng-show="showOther" ng-model="amountToBeDonated" placeholder="$15" class="form-control">
         </div>
       </div>
-      <input class="btn btn-primary" type="submit" value="Donate {{amountToBeDonated | currency}} via PayPal">
+      <div class="btn btn-primary col-xs-12" ng-click="showForm = true; showAmount = false">Donate {{amountToBeDonated | currency}} to {{data.name.split(" ")[0]}}</div>
+    </form>
+    <form id="checkout" ng-show="showForm" method="post" action="/checkout">
+      <div id="dropin"></div>
+      <input type="submit" class=" btn btn-primary col-xs-12" value="Donate {{amountToBeDonated | currency}}">
     </form>
     </div>
   </div>
