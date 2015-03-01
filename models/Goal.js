@@ -1,20 +1,10 @@
-var db = require('./db');
-var sequelize = db.sequelize;
-var Sequelize = db.Sequelize;
+var mongoose = require('mongoose');
 
-var User = require('./User');
-
-var Goal = sequelize.define('Goal', {
-  cost: Sequelize.INTEGER,
-  amount_raised: Sequelize.INTEGER,
-  goal_picture_url: Sequelize.STRING,
-  name: Sequelize.STRING,
-  description: Sequelize.TEXT,
-  priority: Sequelize.INTEGER // Zero highest priority
-}, {
-  freezeTableName: true
+module.exports.goalSchema = new mongoose.Schema({
+  cost: Number,
+  amount_raised: Number,
+  goal_picture_url: String,
+  name: String,
+  description: String,
+  priority: Number // Zero highest priority
 });
-
-Goal.belongsTo(User);
-
-module.exports = Goal;

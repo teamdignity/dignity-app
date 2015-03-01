@@ -1,17 +1,18 @@
-var db = require('./db');
-var sequelize = db.sequelize;
-var Sequelize = db.Sequelize;
+var mongoose = require('mongoose');
 
-var User = sequelize.define('User', {
-  type: Sequelize.ENUM('recipient', 'donor', 'volunteer'),
-  name: Sequelize.STRING,
-  email_address: Sequelize.STRING,
-  username: Sequelize.STRING,
-  profile_picture_url: Sequelize.STRING,
-  biography: Sequelize.TEXT,
-  total_times_donated: Sequelize.INTEGER
-}, {
-  freezeTableName: true
+var userSchema = new mongoose.Schema({
+  type: String,
+  name: String,
+  email_address: String,
+  username: {
+    type: String,
+    unique: true
+  },
+  profile_picture_url: String,
+  biography: String,
+  total_times_donated: Number,
+  goals: [require('./Goal').goalSchema]
 });
+var User = mongoose.model('User', userSchema);
 
 module.exports = User;
