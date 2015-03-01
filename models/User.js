@@ -7,6 +7,7 @@ var User = sequelize.define('User', {
   name: Sequelize.STRING,
   email_address: Sequelize.STRING,
   username: Sequelize.STRING,
+  profile_picture_url: Sequelize.STRING,
   biography: Sequelize.TEXT,
   total_times_donated: Sequelize.INTEGER
 }, {
