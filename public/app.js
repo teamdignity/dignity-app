@@ -32,4 +32,12 @@
       });
   });
 
+  app.controller('rootController', ['$scope', '$http', '$state', function($scope, $http, $state){
+    $scope.searchUsername = function(){
+      $state.go('user_profile', {
+        username: 'superwoman123'
+      });
+    };
+  }]);
+
 })();
